@@ -29,3 +29,20 @@ TESTS SEARCH CASES WERE PERFORMED SUCCESSFULLY:
     Search Cases for No Course Found :
         1. twdpisurl
         2. asasasa
+
+
+Challenge  number 1 : 
+    
+1 . Got to ineuron website                              - Done
+2. you have to scrap list of all the listed course name - Done
+3. Got to a specific course one by one and then try to scrap all the curriculam and its respective details      - Done
+4. Try to create a seperate seperate PDF file for all the coursed     - Done
+5. Strore PDF file in amazong s3 bucket                        - Done
+6. Strore all the course related information in mongo DB       - Done
+7. Strore all the course name data and its description in MYSQL- Done
+8. Deploy this application on beanstack , aws and azure        - Not Done
+9. logging is mandatory                   - Done
+10. Exception handling is nescessary      - Done
+11. modular coding is nescessary          - Done
+12. Classs and object is must             - Done
+13. Finally submit your 3 hosted URL to me and sunny along with your code base git hub link
