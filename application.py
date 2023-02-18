@@ -217,9 +217,10 @@ class ineuron_scrape:
                     self.__sql_push()
                     print("Storing in S3 bucket...",end='')
                     lg.info("Storing pdf in Amazon S3 Bucket.")
-                    s3 = boto3.resource(service_name='s3',aws_access_key_id='AKIA6AYVZQE6BLIABOHL',aws_secret_access_key='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')
+#                     s3 = boto3.resource(service_name='s3',aws_access_key_id='',aws_secret_access_key='') #access key hidden to prevent unauthorized access and extra charges
+# if you want to access s3 bucket and store your pdf ther, enter the 2 hidden data and then run the program
                     a = os.getcwd()+'\INeuron Course PDFs'+f'\{self.course_name}'+f'\{self.course_name}.pdf'
-                    s3.Bucket('test-pdf-store').upload_file(Filename=a,Key=f'{self.course_name}.pdf')
+#                     s3.Bucket('test-pdf-store').upload_file(Filename=a,Key=f'{self.course_name}.pdf')
                     print("Completed.")
                     lg.info("Successfully Stored in S3 Bucket.")
                 except Exception as e:
