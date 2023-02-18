@@ -1,5 +1,5 @@
 Git Link - Code works perfectly fine locally
-AWS Link - The Index Page Loads, but an issue of Selenium which does not allow Browsers to open on the EC2 instance could not be solved, so we don't get any output on Cloud
+AWS Link - The Index Page Loads, but an issue of Selenium which does not allow Browsers to open on the EC2 instance could not be solved, so we don't get any output on Cloud (environment has been terminated)
 Azure Link - Azure does not accept sign-up using debit cards (only credit card accepted), so could not sign-up, but even on Azure same Selenium issue would have occured. 
 
 mySQL DB Table -> desc course_details;
