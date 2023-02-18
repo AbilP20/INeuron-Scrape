@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Search Result</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1 style="text-align: center; font-family:'Times New Roman', Times, serif;"><u><i>Search Result for "{{course}}"</i></u></h2>
+	<table>
+		<tr>
+			<th style="font-weight: bold;font-size: larger;"><b>Course Index</b></th>
+			<th style="font-weight: bold;font-size: larger;"><b>Detail</b></th>
+		</tr>
+		
+		<tr>
+			<td><b style="font-size: large;">Name</b></td>
+			<td>{{cname}}</td>
+		</tr>
+		<tr>
+			<td><b style="font-size: large;">Description</b></td>
+			<td>{{cdesc}}</td>
+		</tr>
+
+		<tr>
+			<td><b style="font-size: large;">Features</b></td>
+			<td>
+				<ul>
+					{% for i in cfeat %}
+						<li>{{i}}</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><b style="font-size: large;">What You'll Learn</b></td>
+			<td>	
+				<ul>
+					{% for i in cwyl %}
+						<li>{{i}}</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b style="font-size: large;">Requirements</b></td>
+			<td>
+				<ul>
+					{% for i in creq %}
+						<li>{{i}}</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><b style="font-size: large;">Teachers</b></td>
+			<td>
+				<ul>
+					{% for i,j in cteach.items() %}
+						<li><b>{{i}}-</b>{{j}}</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b style="font-size: large;">Curriculum</b></td>
+			<td>
+				<ul>
+					{% for i,j in ccurr.items() %}
+						<li><b>{{i}}</b>
+							<ul>
+								{% for k in j %}
+									<li>{{k}}</li>
+								{% endfor %}
+							</ul>
+						</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>INeuron Course List</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1 style="text-align: center; font-family:'Times New Roman', Times, serif;"><u><i>List Of All Courses</i></u></h1>
+	<table>
+		<tr>
+			<th style="font-weight: bold;font-size: larger;"><b>Course</b></th>
+			<th style="font-weight: bold;font-size: larger;"><b>Sub-Course</b></th>
+		</tr>
+		{% for i,j in dictionary.items() %}
+		<tr>
+			<td><b style="font-size: large;">{{i}}</b></td>
+			<td>
+				<ul>
+					{% for k in j %}
+						<li>{{k}}</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+</body>
+</html>
